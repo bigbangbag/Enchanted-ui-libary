@@ -1,0 +1,78 @@
+# ✨ Enchanted UI Library  
+A powerful, easy-to-use UI library for Roblox developers.
+
+## 📥 How to Load the UI Library  
+Copy and paste the code below into your Roblox script to load the library:  
+
+```lua
+local EnchantedUI = loadstring(game:HttpGet("https://pastefy.app/YJ46458e/raw"))()
+```
+
+## 🛠️ How to Create a Window  
+```lua
+local window = EnchantedUI:CreateWindow("My UI")
+```
+
+## 📌 Adding Tabs  
+```lua
+local mainTab = EnchantedUI:AddTab(window, "Main")
+local settingsTab = EnchantedUI:AddTab(window, "Settings")
+```
+
+## 🎛️ Adding Elements  
+### ✅ Button
+```lua
+EnchantedUI:AddButton(mainTab, "Click Me!", function()
+    print("Button Clicked!")
+end)
+```
+
+### 🔘 Toggle
+```lua
+EnchantedUI:AddToggle(mainTab, "Enable Feature", function(state)
+    print("Toggle state:", state)
+end)
+```
+
+### 🎨 Color Picker
+```lua
+EnchantedUI:AddColorPicker(mainTab, "Choose Color", function(color)
+    print("Selected Color:", color)
+end)
+```
+
+### 🎹 Keybind
+```lua
+EnchantedUI:AddKeybind(mainTab, "Press Key", Enum.KeyCode.F, function()
+    print("Key Pressed!")
+end)
+```
+
+## 🔑 Key System (Optional)  
+If you want to **lock access to the UI**, use this system:  
+```lua
+local KeySettings = {
+    KeySystemEnabled = true,
+    CustomKey = "MY_SECRET_KEY"
+}
+
+EnchantedUI:CreateKeySystem(KeySettings, function()
+    local window = EnchantedUI:CreateWindow("Test UI") 
+end)
+```
+
+## 🎨 Themes  
+Enchanted UI comes with **multiple themes**! Choose your favorite:  
+```lua
+EnchantedUI:SetTheme("Dark")
+```
+
+### 🎨 Available Themes:  
+- `Dark`
+- `Ocean`
+- `Forest`
+
+## 📜 License  
+This UI library is **free to use** for any Roblox project. If you modify it, please give credit!  
+
+📢 **Enjoy coding with Enchanted UI! 🚀**
